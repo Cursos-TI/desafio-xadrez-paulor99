@@ -1,5 +1,32 @@
 #include <stdio.h>
 
+//funções
+void bispo_recursivo(int numero){
+    if(numero > 0){
+
+       bispo_recursivo(numero - 1);
+        printf("Bispo: direita, cima.\n");
+    }
+
+}
+
+void torre_recursiva(int numero){
+    if(numero > 0){
+
+       torre_recursiva(numero - 1);
+        printf("Torre: direita.\n");
+    }
+
+}
+
+void rainha_recursiva(int numero){
+    if(numero > 0){
+
+       rainha_recursiva(numero - 1);
+        printf("Rainha: esquerda.\n");
+    }
+
+}
 // Desafio de Xadrez - MateCheck
 // Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
 // O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
@@ -9,35 +36,36 @@ int main() {
     // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
 
     //variaveis
-    int bispo, torre, rainha, cavalo;
+    int bispo = 5, torre = 5, rainha = 8, cavalo =0, i = 0;
 
-    for(bispo = 0; bispo <= 4; bispo++){
+  /*  for(bispo = 0; bispo <= 4; bispo++){
         printf ("Bispo: direita, cima.\n");
-    }
+    } */
 
-    printf("\n");
-    for(torre=0; torre <= 4; torre++){
+   //chamada de funções
+   bispo_recursivo(bispo);
+   printf("\n");
+   torre_recursiva(torre);
+   printf("\n");
+   rainha_recursiva(rainha);
+   printf("\n");
+
+   /* for(torre=0; torre <= 4; torre++){
         printf("Torre: direita.\n");
     }
-    printf("\n");
+    printf("\n"); */
 
-    for(rainha=0; rainha <= 7; rainha++){
+   /* for(rainha=0; rainha <= 7; rainha++){
         printf("Rainha: esquerda.\n");
-    }
+    } */
     
-    printf("\n");
-
-     for(cavalo=0; cavalo < 2; cavalo++){
+    
+    // for para movimentar o cavalo
+     for(cavalo, i; cavalo < 1 && i <= 1; cavalo++, i++){
         
-        int i = 0;
-        while(i < 1){
-           printf("Cavalo: abaixo.\n");
-
-           if(cavalo == 1){
-            printf("Cavalo: esquerda.\n");
-           }
-            i++;
-        }
+        printf("Cavalo: cima.\n");
+        printf("Cavalo: cima.\n");
+        printf("Cavalo: direita.\n");
     }
 
 
