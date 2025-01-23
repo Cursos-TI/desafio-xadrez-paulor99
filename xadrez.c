@@ -9,7 +9,7 @@ int main() {
     // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
 
     //variaveis
-    int bispo, torre, rainha;
+    int bispo, torre, rainha, cavalo;
 
     for(bispo = 0; bispo <= 4; bispo++){
         printf ("Bispo: direita, cima.\n");
@@ -24,6 +24,23 @@ int main() {
     for(rainha=0; rainha <= 7; rainha++){
         printf("Rainha: esquerda.\n");
     }
+    
+    printf("\n");
+
+     for(cavalo=0; cavalo < 2; cavalo++){
+        
+        int i = 0;
+        while(i < 1){
+           printf("Cavalo: abaixo.\n");
+
+           if(cavalo == 1){
+            printf("Cavalo: esquerda.\n");
+           }
+            i++;
+        }
+    }
+
+
     
     // Implementação de Movimentação do Bispo
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
